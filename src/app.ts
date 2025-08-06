@@ -34,7 +34,10 @@ const axisY = chart.getDefaultAxisY()
 
 const series = chart
     .addPointLineAreaSeries({
-        dataPattern: 'ProgressiveX',
+        schema: {
+            xValues: { pattern: 'progressive' },
+            yValues: { pattern: null },
+        },
     })
     .setAreaFillStyle(emptyFill)
     .setMaxSampleCount(dataAmountNumber)
